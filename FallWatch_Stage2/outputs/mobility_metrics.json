@@ -1,0 +1,101 @@
+{
+  "n_patients": 200,
+  "seed": 7,
+  "zscore_default": {
+    "sensitivity": 0.9193548387096774,
+    "specificity_all_non_decliners": 0.6739130434782609,
+    "specificity_excl_slow_drift": 0.8,
+    "false_alert_by_kind": {
+      "decliner": 0.9193548387096774,
+      "stable": 0.203125,
+      "transient_dip": 0.1956521739130435,
+      "slow_drift": 0.8214285714285714
+    },
+    "median_lead_weeks": 2.0,
+    "n_decliners": 62,
+    "n_non_decliners": 138
+  },
+  "sweep": [
+    {
+      "z_threshold": -1.0,
+      "sustain_weeks": 2,
+      "sensitivity": 0.9354838709677419,
+      "specificity_excl_slow_drift": 0.6090909090909091,
+      "median_lead_weeks": 1.0
+    },
+    {
+      "z_threshold": -1.0,
+      "sustain_weeks": 3,
+      "sensitivity": 0.8709677419354839,
+      "specificity_excl_slow_drift": 0.8909090909090909,
+      "median_lead_weeks": 3.0
+    },
+    {
+      "z_threshold": -1.5,
+      "sustain_weeks": 2,
+      "sensitivity": 0.9193548387096774,
+      "specificity_excl_slow_drift": 0.8,
+      "median_lead_weeks": 2.0
+    },
+    {
+      "z_threshold": -1.5,
+      "sustain_weeks": 3,
+      "sensitivity": 0.8387096774193549,
+      "specificity_excl_slow_drift": 0.9727272727272728,
+      "median_lead_weeks": 3.0
+    },
+    {
+      "z_threshold": -2.0,
+      "sustain_weeks": 2,
+      "sensitivity": 0.8548387096774194,
+      "specificity_excl_slow_drift": 0.9181818181818182,
+      "median_lead_weeks": 3.0
+    },
+    {
+      "z_threshold": -2.0,
+      "sustain_weeks": 3,
+      "sensitivity": 0.7741935483870968,
+      "specificity_excl_slow_drift": 0.990909090909091,
+      "median_lead_weeks": 4.0
+    },
+    {
+      "z_threshold": -2.5,
+      "sustain_weeks": 2,
+      "sensitivity": 0.8064516129032258,
+      "specificity_excl_slow_drift": 0.9636363636363636,
+      "median_lead_weeks": 3.0
+    },
+    {
+      "z_threshold": -2.5,
+      "sustain_weeks": 3,
+      "sensitivity": 0.6935483870967742,
+      "specificity_excl_slow_drift": 1.0,
+      "median_lead_weeks": 4.0
+    }
+  ],
+  "ml_gradient_boosting": {
+    "sensitivity": 0.7258064516129032,
+    "specificity_all_non_decliners": 0.9420289855072463,
+    "specificity_excl_slow_drift": 0.990909090909091,
+    "false_alert_by_kind": {
+      "decliner": 0.7258064516129032,
+      "stable": 0.015625,
+      "transient_dip": 0.0,
+      "slow_drift": 0.25
+    },
+    "median_lead_weeks": 4.0,
+    "n_decliners": 62,
+    "n_non_decliners": 138
+  },
+  "benchmark": {
+    "pooled_sensitivity": 0.55,
+    "pooled_specificity": 0.89,
+    "auc": 0.85,
+    "auc_ml": 0.9,
+    "auc_statistical": 0.79
+  },
+  "targets": {
+    "sensitivity": 0.8,
+    "specificity": 0.85
+  }
+}

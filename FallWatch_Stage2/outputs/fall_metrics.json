@@ -1,0 +1,330 @@
+{
+  "n_subjects": 90,
+  "seed": 42,
+  "n_windows": 13860,
+  "n_falls": 1260,
+  "adl_events_per_day": 42.6,
+  "trigger_recall": 0.9531746031746032,
+  "adl_trigger_rate": 0.6580952380952381,
+  "models": {
+    "threshold_only_2.5g": {
+      "sensitivity": 0.792063492063492,
+      "specificity": 0.7632539682539683,
+      "fp_rate": 0.23674603174603176,
+      "false_alarms_per_day": 10.085380952380953,
+      "ci95": {
+        "sensitivity": [
+          0.7515873015873016,
+          0.8269841269841269
+        ],
+        "specificity": [
+          0.7565873015873016,
+          0.77
+        ],
+        "fp_rate": [
+          0.23,
+          0.24341269841269841
+        ],
+        "false_alarms_per_day": [
+          9.798,
+          10.369380952380952
+        ]
+      }
+    },
+    "stage1_features": {
+      "sensitivity": 0.8023809523809524,
+      "specificity": 0.9765873015873016,
+      "fp_rate": 0.023412698412698413,
+      "false_alarms_per_day": 0.9973809523809524,
+      "ci95": {
+        "sensitivity": [
+          0.765079365079365,
+          0.8373015873015873
+        ],
+        "specificity": [
+          0.9742857142857143,
+          0.979047619047619
+        ],
+        "fp_rate": [
+          0.02095238095238095,
+          0.025714285714285714
+        ],
+        "false_alarms_per_day": [
+          0.8925714285714286,
+          1.0954285714285714
+        ]
+      }
+    },
+    "stage2_features": {
+      "sensitivity": 0.9142857142857143,
+      "specificity": 0.9943650793650793,
+      "fp_rate": 0.005634920634920635,
+      "false_alarms_per_day": 0.24004761904761907,
+      "ci95": {
+        "sensitivity": [
+          0.8912698412698413,
+          0.9349206349206349
+        ],
+        "specificity": [
+          0.9931746031746032,
+          0.9955575396825397
+        ],
+        "fp_rate": [
+          0.004442460317460317,
+          0.006825396825396826
+        ],
+        "false_alarms_per_day": [
+          0.1892488095238095,
+          0.2907619047619048
+        ]
+      }
+    }
+  },
+  "by_frailty": {
+    "robust": {
+      "n_subjects": 45,
+      "n_falls": 630,
+      "sensitivity": 0.973015873015873,
+      "false_alarms_per_day": 0.2366666666666667
+    },
+    "pre-frail": {
+      "n_subjects": 32,
+      "n_falls": 448,
+      "sensitivity": 0.8816964285714286,
+      "false_alarms_per_day": 0.19017857142857142
+    },
+    "frail": {
+      "n_subjects": 13,
+      "n_falls": 182,
+      "sensitivity": 0.7912087912087912,
+      "false_alarms_per_day": 0.37450549450549453
+    }
+  },
+  "by_activity": {
+    "arm_hit": {
+      "n": 1759,
+      "triggered": 1.0,
+      "flagged": 0.0
+    },
+    "fall_hard": {
+      "n": 1080,
+      "triggered": 0.9916666666666667,
+      "flagged": 0.9898148148148148
+    },
+    "fall_soft": {
+      "n": 180,
+      "triggered": 0.7222222222222222,
+      "flagged": 0.46111111111111114
+    },
+    "lie_down": {
+      "n": 615,
+      "triggered": 0.46178861788617886,
+      "flagged": 0.11544715447154472
+    },
+    "plop_sit": {
+      "n": 599,
+      "triggered": 1.0,
+      "flagged": 0.0
+    },
+    "sit_down": {
+      "n": 3607,
+      "triggered": 0.5885777654560577,
+      "flagged": 0.0
+    },
+    "stairs_down": {
+      "n": 2303,
+      "triggered": 0.9969604863221885,
+      "flagged": 0.0
+    },
+    "stand_up": {
+      "n": 3528,
+      "triggered": 0.2953514739229025,
+      "flagged": 0.0
+    },
+    "stumble_recover": {
+      "n": 189,
+      "triggered": 1.0,
+      "flagged": 0.0
+    }
+  },
+  "soft_fall_sensitivity": 0.46111111111111114,
+  "hard_fall_sensitivity": 0.9898148148148148,
+  "sweep": [
+    {
+      "threshold": 0.1,
+      "sensitivity": 0.9531746031746032,
+      "false_alarms_per_day": 1.0142857142857142
+    },
+    {
+      "threshold": 0.15,
+      "sensitivity": 0.9523809523809523,
+      "false_alarms_per_day": 0.9466666666666668
+    },
+    {
+      "threshold": 0.2,
+      "sensitivity": 0.9484126984126984,
+      "false_alarms_per_day": 0.8858095238095239
+    },
+    {
+      "threshold": 0.25,
+      "sensitivity": 0.9444444444444444,
+      "false_alarms_per_day": 0.8215714285714285
+    },
+    {
+      "threshold": 0.3,
+      "sensitivity": 0.9388888888888889,
+      "false_alarms_per_day": 0.7370476190476191
+    },
+    {
+      "threshold": 0.35,
+      "sensitivity": 0.9349206349206349,
+      "false_alarms_per_day": 0.6254761904761905
+    },
+    {
+      "threshold": 0.4,
+      "sensitivity": 0.9301587301587302,
+      "false_alarms_per_day": 0.4733333333333334
+    },
+    {
+      "threshold": 0.45,
+      "sensitivity": 0.9222222222222223,
+      "false_alarms_per_day": 0.34485714285714286
+    },
+    {
+      "threshold": 0.5,
+      "sensitivity": 0.9142857142857143,
+      "false_alarms_per_day": 0.24004761904761907
+    },
+    {
+      "threshold": 0.55,
+      "sensitivity": 0.9087301587301587,
+      "false_alarms_per_day": 0.17242857142857143
+    },
+    {
+      "threshold": 0.6,
+      "sensitivity": 0.8968253968253969,
+      "false_alarms_per_day": 0.11157142857142857
+    },
+    {
+      "threshold": 0.65,
+      "sensitivity": 0.8888888888888888,
+      "false_alarms_per_day": 0.06761904761904762
+    },
+    {
+      "threshold": 0.7,
+      "sensitivity": 0.8761904761904762,
+      "false_alarms_per_day": 0.0540952380952381
+    },
+    {
+      "threshold": 0.75,
+      "sensitivity": 0.8603174603174604,
+      "false_alarms_per_day": 0.03719047619047619
+    },
+    {
+      "threshold": 0.8,
+      "sensitivity": 0.8412698412698413,
+      "false_alarms_per_day": 0.016904761904761905
+    },
+    {
+      "threshold": 0.85,
+      "sensitivity": 0.8087301587301587,
+      "false_alarms_per_day": 0.006761904761904762
+    },
+    {
+      "threshold": 0.9,
+      "sensitivity": 0.7690476190476191,
+      "false_alarms_per_day": 0.0
+    },
+    {
+      "threshold": 0.95,
+      "sensitivity": 0.692063492063492,
+      "false_alarms_per_day": 0.0
+    }
+  ],
+  "inference_ms": {
+    "mean": 9.33766957333622,
+    "p95": 9.849142899952312
+  },
+  "alert_latency_s_immediate": 2.2093376695733364,
+  "targets": {
+    "sensitivity": {
+      "target": 0.8,
+      "value": 0.9142857142857143,
+      "met": true
+    },
+    "specificity": {
+      "target": 0.85,
+      "value": 0.9943650793650793,
+      "met": true
+    },
+    "false_alarms_per_day": {
+      "target": 1.0,
+      "value": 0.24004761904761907,
+      "met": true
+    }
+  },
+  "benchmark_real_world": {
+    "mean_sensitivity": 0.57,
+    "best_sensitivity": 0.828,
+    "mean_specificity": 0.83,
+    "best_specificity": 0.98
+  },
+  "importance": [
+    [
+      "tilt_change_deg",
+      0.5022960134673435
+    ],
+    [
+      "range",
+      0.06566554840647178
+    ],
+    [
+      "max_jerk",
+      0.059834010053147285
+    ],
+    [
+      "max",
+      0.05397361969987951
+    ],
+    [
+      "std",
+      0.0471454649386254
+    ],
+    [
+      "freefall_depth",
+      0.046091936152704925
+    ],
+    [
+      "post_energy",
+      0.041255974023390526
+    ],
+    [
+      "sma",
+      0.034749383410526816
+    ],
+    [
+      "post_stillness",
+      0.03230893698107471
+    ],
+    [
+      "mean",
+      0.030245736793177286
+    ],
+    [
+      "min",
+      0.024607801325187036
+    ],
+    [
+      "pre_activity",
+      0.023198045340778805
+    ],
+    [
+      "energy",
+      0.020880453014451614
+    ],
+    [
+      "rms",
+      0.017747076393240704
+    ]
+  ]
+}

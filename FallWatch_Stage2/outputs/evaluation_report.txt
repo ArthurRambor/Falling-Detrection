@@ -1,0 +1,23 @@
+
+Pipeline 1: fall detection (90 simulated subjects, 1260 falls, 12600 daily-activity events)
+Trigger recall 95.3%; daily-activity events passing the trigger 65.8%
+model                              sensitivity           specificity      false alarms/day
+threshold_only_2.5g        79.2% [75.2%,82.7%]    76.3% [75.7%,77.0%]   10.09 [9.80,10.37]
+stage1_features            80.2% [76.5%,83.7%]    97.7% [97.4%,97.9%]    1.00 [0.89,1.10]
+stage2_features            91.4% [89.1%,93.5%]    99.4% [99.3%,99.6%]    0.24 [0.19,0.29]
+By frailty group: {'robust': '97.3% sens, 0.24 FA/day', 'pre-frail': '88.2% sens, 0.19 FA/day', 'frail': '79.1% sens, 0.37 FA/day'}
+Hard falls 99.0%, soft slump falls 46.1%
+Inference 9.3 ms; immediate-alert latency 2.21 s
+  target sensitivity: 0.914 vs 0.8 -> met
+  target specificity: 0.994 vs 0.85 -> met
+  target false_alarms_per_day: 0.240 vs 1.0 -> met
+
+Pipeline 2: mobility decline (200 simulated patients, patient-level)
+method                      sensitivity  specificity*  specificity**  lead (wk)
+z-score (z<-1.5, 2 wk)            91.9%         80.0%          67.4%        2.0
+gradient boosting                 72.6%         99.1%          94.2%        4.0
+  * excluding slow drift   ** all non-decliners incl. slow drift
+False-alert rate by group (z-score): {'decliner': '92%', 'stable': '20%', 'transient_dip': '20%', 'slow_drift': '82%'}
+Sweep: [(-1.0, 2, '94%', '61%'), (-1.0, 3, '87%', '89%'), (-1.5, 2, '92%', '80%'), (-1.5, 3, '84%', '97%'), (-2.0, 2, '85%', '92%'), (-2.0, 3, '77%', '99%'), (-2.5, 2, '81%', '96%'), (-2.5, 3, '69%', '100%')]
+
+metrics written to outputs/fall_metrics.json and mobility_metrics.json
